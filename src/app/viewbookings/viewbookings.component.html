@@ -1,0 +1,19 @@
+<nav>
+  <a routerLink="/dashboard">Book A Slot</a>
+  <a class="mousehover default">View Bookings</a>
+  <a routerLink="/" class="redhover">Logout</a>
+</nav>
+<div class="product-container">
+      <div class="product-card" *ngFor="let slot of chunkedBookingDetails">
+        
+        USER ID : {{slot.user_id}}<br><br>
+        USER Email : {{slot.user_email}}<br><br>
+       PAYMENT ID : {{slot.payment_id}}<br><br>
+       CARD NUMBER: {{slot.card_number}}<br><br> 
+           
+      </div>
+      <div *ngIf="bookingResponse">
+        <p>{{ bookingResponse }}</p>
+      </div>
+      
+ </div>
